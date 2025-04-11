@@ -4,7 +4,7 @@ namespace ClickedTran\libScriptAPI;
 class libScriptAPI {
   public static function runScript(string $filePath, array $vars = []): void {
     if (!file_exists($filePath)) {
-        echo "Script file not found: $filePath\n";
+        echo "Script file not found: ".$filePath."\n";
         return;
     }
 
