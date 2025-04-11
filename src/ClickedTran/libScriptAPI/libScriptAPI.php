@@ -10,8 +10,13 @@ class libScriptAPI {
 
     $code = file_get_contents($filePath);
     $code = preg_replace('/^\s*<\?php/', '', $code);
-   // $code = preg_replace('/(\$\w+)\^([a-zA-Z_]\w*)/', '$1->$2', $code);
-    $code = preg_replace('/(\$\w+)\.([a-zA-Z_]\w*)/', '$1->$2', $code);
+      
+    do {
+        $oldCode = $code;
+        // $a.b => $a->b
+        $code = preg_replace('/((?:\$\w+|\b[a-zA-Z_][\w:]*\(\)))\.([a-zA-Z_]\w*)/', '$1->$2', $code);
+
+    } while ($code !== $oldCode);
 
     $tmpFile = tempnam(sys_get_temp_dir(), "script_");
     file_put_contents($tmpFile, "<?php\n" . $code);
