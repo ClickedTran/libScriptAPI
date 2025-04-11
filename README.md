@@ -11,12 +11,12 @@ use ClickedTran\libScriptAPI\libScriptAPI
 
 Use file without `namespace and class`
 ```php
-libScriptAPI::runScript(__DIR__ . "YOUR FILE PATH");
+libScriptAPI::runScript(__DIR__ . "/YOUR FILE PATH");
 ```
 
 Add $player or other in `YOUR FILE PATH`
 ```php
-libScriptAPI::runScript(__DIR__ . "YOUR FILE PATH", [
+libScriptAPI::runScript(__DIR__ . "/YOUR FILE PATH", [
   "player" => $player
   //other code...
   ]);
