@@ -28,7 +28,7 @@ class libScriptAPI {
     try {
         include $tmpFile;
     } catch (\Throwable $e) {
-        echo "[ScriptRunner Error] " . $e->getMessage() . "\n";
+        Server::getInstance()->getLogger()->warning("[ScriptRunner Error] " . $e->getMessage() . "\n");
     }
 
     unlink($tmpFile);
