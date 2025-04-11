@@ -1,10 +1,12 @@
 <?php
 namespace ClickedTran\libScriptAPI;
 
+use pocketmine\Server;
+
 class libScriptAPI {
   public static function runScript(string $filePath, array $vars = []): void {
     if (!file_exists($filePath)) {
-        echo "Script file not found: ".$filePath."\n";
+        Server::getInstance()->getLogger()->warning("Script file not found: ".$filePath."\n");
         return;
     }
 
