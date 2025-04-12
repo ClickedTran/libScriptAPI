@@ -22,6 +22,13 @@ libScriptAPI::runScript(__DIR__ . "/YOUR FILE PATH", [
   ]);
 ```
 
+Use file in `plugin_data`
+```php
+libScriptAPI::runScript($this->getDataFolder() . "/YOUR FILE PATH", [
+   "player" => $player
+   ]);
+```
+
 ## TESTER PLUGIN
 [Watch here](https://github.com/ClickedTran/libScriptAPIPlugin)
 
