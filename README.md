@@ -24,3 +24,5 @@ libScriptAPI::runScript(__DIR__ . "/YOUR FILE PATH", [
 
 ## TESTER PLUGIN
 [Watch here](https://github.com/ClickedTran/libScriptAPIPlugin)
+
+# THIS IS JUST A LIB CREATED BY A FREE AND CHILL GUY NOTHING TO DO
